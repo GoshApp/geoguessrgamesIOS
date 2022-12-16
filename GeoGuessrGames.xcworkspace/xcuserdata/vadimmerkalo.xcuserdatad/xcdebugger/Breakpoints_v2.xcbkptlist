@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1943B344-B8A1-4B44-A48F-F26EEEB75B39"
+            uuid = "87F3F8F2-FC9A-4C11-AEB8-75E32E6D9E15"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GeoGuessrGames/View/ViewController.swift"
+            filePath = "GeoGuessrGames/View/HelpViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "35F653DE-1E73-43FE-9038-ABE7CF18D9F6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GeoGuessrGames/View/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "buttonHelpClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

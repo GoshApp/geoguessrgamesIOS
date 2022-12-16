@@ -47,12 +47,10 @@ class CoursesController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "HelpID") as! HelpViewController
-//        vc.curentPoints = courseViewModels[indexPath.row]
-
-            let vc1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HelpID") as! HelpViewController
-            navigationController?.pushViewController(vc1, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewControllerID") as! MapViewController
+        vc.curentPoints = courseViewModels[indexPath.row]
+        self.present(vc, animated:false, completion:nil)
     }
     
     fileprivate func setupTableView() {

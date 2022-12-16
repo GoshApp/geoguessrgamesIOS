@@ -11,13 +11,21 @@ class HelpViewController: UIViewController {
     
     var curentPoints: CourseViewModel?
 
+    @IBOutlet weak var buttonHelp: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    
+    
+    @IBAction func buttonHelpClick(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HelpID") as! HelpViewController
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -144,7 +144,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         }
         
         let target = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        mapViewPosition.camera = GMSCameraPosition(target: target, zoom: 0.5)
+        mapViewPosition?.camera = GMSCameraPosition(target: target, zoom: 0.5)
         
         latitudeOfPoint = coordinate.latitude
         longitudeOfPoint = coordinate.longitude
