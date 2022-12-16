@@ -1,0 +1,6 @@
+framework module Pods_GeoGuessrGames {
+  umbrella header "Pods-GeoGuessrGames-umbrella.h"
+
+  export *
+  module * { export * }
+}

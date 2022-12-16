@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Courses Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CoursesController" customModule="GeoGuessrGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="4"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="FzG-y0-jlm">
+            <objects>
+                <viewController storyboardIdentifier="MapViewControllerID" id="QUo-VD-zgz" customClass="MapViewController" customModule="GeoGuessrGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C79-Oi-kOc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Oo-yj-elU" customClass="GMSPanoramaView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="932"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIz-cC-Dq7" customClass="GMSMapView">
+                                <rect key="frame" x="183" y="59" width="210" height="301.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-Ma-zf9">
+                                <rect key="frame" x="335" y="764" width="42" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="map.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SA-ng-pmP">
+                                <rect key="frame" x="201" y="360.66666666666669" width="176" height="22.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="PLACE YOUR PIN ON THE MAP">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CBu-3n-BH6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2SA-ng-pmP" firstAttribute="top" secondItem="GIz-cC-Dq7" secondAttribute="bottom" id="6Rh-tL-tds"/>
+                            <constraint firstItem="GIz-cC-Dq7" firstAttribute="trailing" secondItem="CBu-3n-BH6" secondAttribute="trailing" id="BTy-Mv-cQT"/>
+                            <constraint firstAttribute="bottom" secondItem="7Oo-yj-elU" secondAttribute="bottom" constant="-80" id="Izm-AW-l8R"/>
+                            <constraint firstItem="CBu-3n-BH6" firstAttribute="trailing" secondItem="2SA-ng-pmP" secondAttribute="trailing" constant="16" id="LPC-wA-qhn"/>
+                            <constraint firstItem="GIz-cC-Dq7" firstAttribute="top" secondItem="CBu-3n-BH6" secondAttribute="top" id="OQB-k3-KSP"/>
+                            <constraint firstItem="7Oo-yj-elU" firstAttribute="leading" secondItem="CBu-3n-BH6" secondAttribute="leading" id="Old-32-TrR"/>
+                            <constraint firstItem="CBu-3n-BH6" firstAttribute="trailing" secondItem="vG3-Ma-zf9" secondAttribute="trailing" constant="16" id="PgR-Z4-axP"/>
+                            <constraint firstItem="vG3-Ma-zf9" firstAttribute="top" secondItem="2SA-ng-pmP" secondAttribute="bottom" constant="381" id="Ppg-Wl-KHB"/>
+                            <constraint firstItem="GIz-cC-Dq7" firstAttribute="leading" secondItem="CBu-3n-BH6" secondAttribute="leading" constant="183" id="S2w-Oz-o8Q"/>
+                            <constraint firstItem="2SA-ng-pmP" firstAttribute="leading" secondItem="CBu-3n-BH6" secondAttribute="leading" constant="201" id="bnn-oL-Ky9"/>
+                            <constraint firstItem="7Oo-yj-elU" firstAttribute="top" secondItem="C79-Oi-kOc" secondAttribute="topMargin" constant="-59" id="oCt-FH-JYd"/>
+                            <constraint firstItem="7Oo-yj-elU" firstAttribute="trailing" secondItem="CBu-3n-BH6" secondAttribute="trailing" id="oYp-zD-ghQ"/>
+                            <constraint firstItem="vG3-Ma-zf9" firstAttribute="leading" secondItem="CBu-3n-BH6" secondAttribute="leading" constant="335" id="qap-aj-9qs"/>
+                            <constraint firstItem="CBu-3n-BH6" firstAttribute="bottom" secondItem="vG3-Ma-zf9" secondAttribute="bottom" constant="20" id="swd-bM-AfF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="69s-5u-1aY">
+                        <barButtonItem key="leftBarButtonItem" id="thx-6L-Of6"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjH-Y2-TBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="4"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="ix5-rg-c8p">
+            <objects>
+                <viewController storyboardIdentifier="HelpID" id="yS4-f0-a3g" customClass="HelpViewController" customModule="GeoGuessrGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RO2-cr-Fy0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qrB-at-moz"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6Y-Yc-Tg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
