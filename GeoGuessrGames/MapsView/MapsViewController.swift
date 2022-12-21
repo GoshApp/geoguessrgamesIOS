@@ -120,13 +120,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         placeTourMap.isHidden = true
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "RezultViewControllerID") as! RezultViewController
-//        vc.curentPoints = curentPoints
-//        vc.latitudeOfPoint = latitudeOfPoint
-//        vc.longitudeOfPoint = longitudeOfPoint
-//        navigationController?.pushViewController(vc, animated: false)
-//        MapViewController.curentPoint += 1
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RezultViewControllerID") as? RezultViewController
+        vc!.curentPoints = curentPoints
+        vc!.latitudeOfPoint = latitudeOfPoint
+        vc!.longitudeOfPoint = longitudeOfPoint
+        show(vc!, sender: self)
+        MapViewController.curentPoint += 1
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -157,6 +156,4 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 //        let vc = storyboard.instantiateViewController(withIdentifier: "CoursesControllerID") as! CoursesController
 //        navigationController?.pushViewController(vc, animated: false)
     }
-    
-    
 }

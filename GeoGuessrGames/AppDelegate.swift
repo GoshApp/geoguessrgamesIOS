@@ -7,18 +7,19 @@
 
 import UIKit
 import GoogleMaps
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    let googleApiKey = "AIzaSyAz9a8JHv5E0zKptOa47dH_LynIkTMkFQI"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        GMSServices.provideAPIKey(googleApiKey)
+        GMSServices.provideAPIKey("AIzaSyBm3QElalx93GJGIVHg_Un3MI3p70l1n9E")
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         window = UIWindow()
         window?.makeKeyAndVisible()

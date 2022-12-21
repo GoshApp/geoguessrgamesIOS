@@ -7,5 +7,5 @@ target 'GeoGuessrGames' do
 
   # Pods for GeoGuessrGames
   pod 'GoogleMaps'
-
+  pod 'Google-Mobile-Ads-SDK'
 end

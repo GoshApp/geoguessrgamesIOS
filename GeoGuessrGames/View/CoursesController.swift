@@ -47,10 +47,11 @@ class CoursesController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewControllerID") as! MapViewController
-        vc.curentPoints = courseViewModels[indexPath.row]
-        self.present(vc, animated:false, completion:nil)
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MapViewControllerID") as? MapViewController
+        vc!.curentPoints = courseViewModels[indexPath.row]
+        vc!.modalTransitionStyle = .flipHorizontal
+        vc!.modalPresentationStyle = .currentContext
+        show(vc!, sender: self)
     }
     
     fileprivate func setupTableView() {
