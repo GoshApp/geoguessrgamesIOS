@@ -161,7 +161,7 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
             defPoint = point
         }
         RezultViewController.score = RezultViewController.score + defPoint
-        textGuessWas.text = "Your guess was: \(distance)km"
+        textGuessWas.text = "Your guess was: \(distance / 1000)km"
         textPoint.text = "Your point: \(defPoint)"
         textScore.text = "Your score: \(RezultViewController.score + defPoint)"
         textState.text = "Your state: \(MapViewController.curentPoint - 1)"

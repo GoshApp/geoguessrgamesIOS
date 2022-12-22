@@ -11,12 +11,13 @@ import GoogleMaps
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
     @IBOutlet weak var mapViewPosition: GMSMapView!
+    
     @IBOutlet weak var mapViewPanorama: GMSPanoramaView!
     
-    @IBOutlet weak var button: UIButton!
     
     @IBOutlet weak var placeTourMap: UIButton!
     
+    @IBOutlet weak var button: UIButton!
     
     var isBigFrame = true
     var latitudeOfPoint: Double = 0.0
@@ -36,6 +37,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         showMarker(position: camera.target)
         let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         mapView.clear()
+        self.view.addSubview(mapView)
         
         
         let panoView = GMSPanoramaView(frame: .zero)

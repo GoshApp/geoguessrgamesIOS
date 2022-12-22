@@ -6,6 +6,8 @@ target 'GeoGuessrGames' do
   use_frameworks!
 
   # Pods for GeoGuessrGames
-  pod 'GoogleMaps'
-  pod 'Google-Mobile-Ads-SDK'
+
+ pod 'GoogleMaps', '7.2.0'
+ pod 'Google-Mobile-Ads-SDK'
+
 end

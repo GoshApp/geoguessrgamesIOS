@@ -13,11 +13,13 @@ import GoogleMobileAds
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let googleMapsApiKey = "AIzaSyBm3QElalx93GJGIVHg_Un3MI3p70l1n9E"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        GMSServices.provideAPIKey("AIzaSyBm3QElalx93GJGIVHg_Un3MI3p70l1n9E")
+        GMSServices.provideAPIKey(googleMapsApiKey)
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
