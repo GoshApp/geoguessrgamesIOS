@@ -27,11 +27,11 @@
         <scene sceneID="dJq-aM-62H">
             <objects>
                 <viewController storyboardIdentifier="MapViewControllerID" id="i17-wf-rXQ" customClass="MapViewController" customModule="GeoGuessrGames" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="guX-id-YuS">
+                    <view key="view" contentMode="scaleToFill" id="guX-id-YuS">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bH3-ro-spf" customClass="GMSPanoramaView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bH3-ro-spf" customClass="GMSPanoramaView">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -50,14 +50,12 @@
                                     <constraint firstAttribute="width" constant="270" id="ahB-Hj-H3q"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Place tour Map">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="filled"/>
                                 <connections>
                                     <action selector="nextButtons:" destination="i17-wf-rXQ" eventType="touchUpInside" id="KCb-Bg-e8u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqx-Yd-XFj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqx-Yd-XFj">
                                 <rect key="frame" x="324" y="847" width="86" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="Mmq-Ex-0A6"/>
@@ -262,6 +260,7 @@
                         <outlet property="progressView" destination="bzY-D5-k2c" id="aoR-Ev-Cyr"/>
                         <outlet property="ratingStackView" destination="wC9-FG-k87" id="P0A-jF-yJ6"/>
                         <outlet property="textGuessWas" destination="tcR-2u-h2G" id="cCm-eF-AHA"/>
+                        <outlet property="textLocation" destination="jbD-Ps-afl" id="a7K-P7-0Dt"/>
                         <outlet property="textPoint" destination="FFU-6c-dFm" id="BJA-G6-CZa"/>
                         <outlet property="textScore" destination="ZKy-uH-4wD" id="urU-uu-wk4"/>
                         <outlet property="textState" destination="2HG-ff-q9c" id="irP-1w-LoT"/>

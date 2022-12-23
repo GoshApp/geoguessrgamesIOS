@@ -36,10 +36,28 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
     @IBOutlet weak var textState: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var textLocation: UILabel!
+    
+    let textguesswas = "Your guess was:".addLocalizableString()
+    let textpoint = "Your point:".addLocalizableString()
+    let textscore = "Your score:".addLocalizableString()
+    let textstate = "Your state:".addLocalizableString()
+    let timertext = "You can start the game in:".addLocalizableString()
+    let secondstext = "seconds".addLocalizableString()
+    let letsstart = "Let's start!".addLocalizableString()
+    let textlocation = "Did you enjoy this location?".addLocalizableString()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        button.setTitle("PLAY NEXT ROUND", for: .normal)
+        button.titleLabel?.textAlignment = .center
+        let singUp = NSLocalizedString("PLAY NEXT ROUND", comment: "Next round")
+        button.setTitle(singUp, for: .normal)
+        
+        textLocation.text = textlocation
+        
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         button.isEnabled = false
         let request = GADRequest()
@@ -62,6 +80,8 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
         
         progressView.progress = RezultViewController.progressi
         
+        changeLanguale(str: "en")
+        
         calculator(coordinate0: coordinate0, coordinate1: coordinate1)
         
         timer2 = Timer.scheduledTimer(
@@ -75,9 +95,9 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
     @objc func updateCounter() {
         counter -= 1
         counterTimer -= 1
-        timer.text = "You can start the game in: \(counter) seconds"
+        timer.text = "\(timertext) \(counter) \(secondstext)"
         if counter == 0 {
-            timer.text = "Let's start!"
+            timer.text = letsstart
             handleTimerExecution() }
     }
     
@@ -153,6 +173,11 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
         marker2.map = mapView
     }
     
+    func changeLanguale(str: String){
+//        textGuessWas.text = textguesswas.addLocalizableString(str: str)
+//        textPoint.text = textpoint.addLocalizableString(str: str)
+    }
+    
     func calculator(coordinate0: CLLocation, coordinate1: CLLocation){
         let distance = Int(coordinate0.distance(from: coordinate1))
         var defPoint = 33
@@ -161,11 +186,10 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
             defPoint = point
         }
         RezultViewController.score = RezultViewController.score + defPoint
-        textGuessWas.text = "Your guess was: \(distance / 1000)km"
-        textPoint.text = "Your point: \(defPoint)"
-        textScore.text = "Your score: \(RezultViewController.score + defPoint)"
-        textState.text = "Your state: \(MapViewController.curentPoint - 1)"
-        
+        textGuessWas.text = "\(textguesswas) \(distance / 1000)km"
+        textPoint.text = "\(textpoint) \(defPoint)"
+        textScore.text = "\(textscore) \(RezultViewController.score + defPoint)"
+        textState.text = "\(textstate) \(MapViewController.curentPoint - 1)"
     }
     
     @IBAction func nextPlayRound(_ sender: UIButton) {
@@ -200,3 +224,16 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
         }
     }
 }
+
+extension String {
+    func addLocalizableString() -> String {
+//        let path = Bundle.main.path(forResource: str, ofType: "lproj")
+//        let bundle = Bundle(path: path!)
+        return NSLocalizedString(self,
+                                 tableName: "Localizable",
+                                 bundle: .main,
+                                 value: self,
+                                 comment: self)
+    }
+}
+

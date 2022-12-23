@@ -26,11 +26,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     static var curentPoint: Int = 1
     
-    
+    var tourMap = "Place tour Map"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        placeTourMap.setTitle(tourMap, for: .normal)
+        
+        let singUp = NSLocalizedString("Place tour Map", comment: "Place tour map")
+        placeTourMap.setTitle(singUp, for: .normal)
         
         let camera = GMSCameraPosition.camera(withLatitude: 48.876225, longitude: 2.320808, zoom: 0.0)
         mapViewPosition.camera = camera
@@ -159,3 +163,4 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 //        navigationController?.pushViewController(vc, animated: false)
     }
 }
+

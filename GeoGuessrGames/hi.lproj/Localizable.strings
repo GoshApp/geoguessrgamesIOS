@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  GeoGuessrGames
+
+  Created by Vadim Merkalo on 22.12.2022.
+  
+*/
+
+// MapViewController
+"Place tour Map" = "स्थान भ्रमण मानचित्र";
+
+//RezultViewController.Text
+"Your guess was:" = "आपका अनुमान था:";
+"Your point:" = "तुम्हारी बात:";
+"Your score:" = "तुम्हारे अंक:";
+"Your state:" = "तुम्हारा राज्य:";
+"You can start the game in:" = "आप गेम को इसमें प्रारंभ कर सकते हैं:";
+"seconds" = "सेकंड";
+"Let's start!" = "चलो शुरू करते हैं!";
+"Did you enjoy this location?" = "क्या आपने इस स्थान का आनंद लिया?";
+//RezultViewController.button
+"PLAY NEXT ROUND" = "अगला दौर खेलें";

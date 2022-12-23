@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  GeoGuessrGames
+
+  Created by Vadim Merkalo on 22.12.2022.
+  
+*/
+
+// MapViewController
+"Place tour Map" = "地点游览图";
+
+//RezultViewController.Text
+"Your guess was:" = "你的猜测是:";
+"Your point:" = "你的观点:";
+"Your score:" = "你的分数:";
+"Your state:" = "您的国家:";
+"You can start the game in:" = "您可以在以下时间开始游戏:";
+"seconds" = "秒";
+"Let's start!" = "开始吧!";
+"Did you enjoy this location?" = "你喜欢这个位置吗?";
+//RezultViewController.button
+"PLAY NEXT ROUND" = "玩下一轮";
+
+

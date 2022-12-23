@@ -1,0 +1,45 @@
+
+/* Class = "UIButton"; configuration.title = "PLAY NEXT ROUND"; ObjectID = "1Cf-wh-QoH"; */
+"1Cf-wh-QoH.configuration.title" = "PLAY NEXT ROUND";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1Cf-wh-QoH"; */
+"1Cf-wh-QoH.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "23M-UN-WCo"; */
+"23M-UN-WCo.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "State"; ObjectID = "2HG-ff-q9c"; */
+"2HG-ff-q9c.text" = "State";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6zQ-T3-6Qz"; */
+"6zQ-T3-6Qz.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "D0J-GY-p1u"; */
+"D0J-GY-p1u.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Timer"; ObjectID = "E0f-TW-tEu"; */
+"E0f-TW-tEu.text" = "Timer";
+
+/* Class = "UILabel"; text = "Point"; ObjectID = "FFU-6c-dFm"; */
+"FFU-6c-dFm.text" = "Point";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "USJ-qb-0Y6"; */
+"USJ-qb-0Y6.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Yqx-Yd-XFj"; */
+"Yqx-Yd-XFj.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Score"; ObjectID = "ZKy-uH-4wD"; */
+"ZKy-uH-4wD.text" = "Score";
+
+/* Class = "UILabel"; text = "Did you enjoy this location?"; ObjectID = "jbD-Ps-afl"; */
+"jbD-Ps-afl.text" = "Did you enjoy this location?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sUZ-kK-uHx"; */
+"sUZ-kK-uHx.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Guess"; ObjectID = "tcR-2u-h2G"; */
+"tcR-2u-h2G.text" = "Guess";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uqg-SA-qzx"; */
+"uqg-SA-qzx.normalTitle" = "Button";
