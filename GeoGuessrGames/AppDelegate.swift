@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMaps
 import GoogleMobileAds
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     let googleMapsApiKey = "AIzaSyBm3QElalx93GJGIVHg_Un3MI3p70l1n9E"
+    let notificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            guard granted else {return}
+            self.notificationCenter.getNotificationSettings { (settings) in
+                print(settings)
+            }
+        }
         
         GMSServices.provideAPIKey(googleMapsApiKey)
         
@@ -27,7 +36,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         window?.rootViewController = CustomNavigationController(rootViewController: CoursesController())
+        sendNotifications()
         return true
+    }
+    
+    func sendNotifications(){
+        let content = UNMutableNotificationContent()
+        content.title = "User we're waiting for you"
+        content.body = "Time to explore new places, onward to adventure!"
+        
+        var date = DateComponents()
+        date.calendar = Calendar.current
+        date.hour = 15
+        date.minute = 30
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "non", content: content, trigger: trigger)
+        
+        notificationCenter.add(request) { (error) in
+            print("Error notification + \(error)")
+        }
     }
 
     // MARK: UISceneSession Lifecycle
