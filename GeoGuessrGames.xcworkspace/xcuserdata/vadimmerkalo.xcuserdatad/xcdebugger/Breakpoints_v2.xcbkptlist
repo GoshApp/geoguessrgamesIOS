@@ -1,38 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "B84446CE-1826-4537-A607-FD114B66DE7F"
+   uuid = "6EAF9952-D487-4A7F-85ED-91BA3CC55AAA"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D7AAD3F-1072-4385-9C02-5EB6FA5E2153"
+            uuid = "7A0C762D-BF41-4999-B454-2777C79ECFB9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeoGuessrGames/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "sendNotifications()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5F2F9235-D0F2-4E04-B4C3-86C2B334C99F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GeoGuessrGames/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "sendNotifications()"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "messaging(_:didReceiveRegistrationToken:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

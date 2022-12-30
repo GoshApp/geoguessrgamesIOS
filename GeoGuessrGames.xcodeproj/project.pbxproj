@@ -22,6 +22,7 @@
 		6DBA6F54294C7C2E00A537C4 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F53294C7C2E00A537C4 /* CourseViewModel.swift */; };
 		6DBA6F56294C7CC300A537C4 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F55294C7CC300A537C4 /* CourseCell.swift */; };
 		6DBA6F58294C7D6B00A537C4 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F57294C7D6B00A537C4 /* MapsViewController.swift */; };
+		6DEB6D49295C5A8400EA6D5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DEB6D48295C5A8400EA6D5D /* GoogleService-Info.plist */; };
 		6DF464D82954969F00062E44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DF464DA2954969F00062E44 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		6DBA6F53294C7C2E00A537C4 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		6DBA6F55294C7CC300A537C4 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		6DBA6F57294C7D6B00A537C4 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		6DEB6D48295C5A8400EA6D5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DEC20E42955B116000602DD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6DEC20E52955B117000602DD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		6DEC20E62955B117000602DD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				6DBA6F40294C7B8600A537C4 /* Assets.xcassets */,
 				6DBA6F42294C7B8600A537C4 /* LaunchScreen.storyboard */,
 				6DBA6F45294C7B8600A537C4 /* Info.plist */,
+				6DEB6D48295C5A8400EA6D5D /* GoogleService-Info.plist */,
 				6DF464DA2954969F00062E44 /* Localizable.strings */,
 			);
 			path = GeoGuessrGames;
@@ -256,6 +259,7 @@
 			files = (
 				6DBA6F44294C7B8600A537C4 /* LaunchScreen.storyboard in Resources */,
 				6DF464D82954969F00062E44 /* Localizable.strings in Resources */,
+				6DEB6D49295C5A8400EA6D5D /* GoogleService-Info.plist in Resources */,
 				6DBA6F41294C7B8600A537C4 /* Assets.xcassets in Resources */,
 				6DBA6F3F294C7B8200A537C4 /* Main.storyboard in Resources */,
 			);
@@ -283,7 +287,7 @@
 		};
 		D84E6EC5753DF53140306CD5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -293,7 +297,7 @@
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GeoGuessrGames/Pods-GeoGuessrGames-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeoGuessrGames/Pods-GeoGuessrGames-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -510,13 +514,15 @@
 				CODE_SIGN_ENTITLEMENTS = GeoGuessrGames/GeoGuessrGames.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				EXCLUDED_ARCHS = arm64;
+				DEVELOPMENT_TEAM = 8693H8CDHV;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeoGuessrGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,13 +548,15 @@
 				CODE_SIGN_ENTITLEMENTS = GeoGuessrGames/GeoGuessrGames.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				EXCLUDED_ARCHS = arm64;
+				DEVELOPMENT_TEAM = 8693H8CDHV;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeoGuessrGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

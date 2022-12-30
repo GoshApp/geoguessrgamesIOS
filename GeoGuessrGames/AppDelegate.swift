@@ -9,6 +9,9 @@ import UIKit
 import GoogleMaps
 import GoogleMobileAds
 import UserNotifications
+import Firebase
+import FirebaseAnalytics
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(settings)
             }
         }
+        
+        configureFirebase(for: application)
         
         GMSServices.provideAPIKey(googleMapsApiKey)
         
@@ -72,7 +77,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+}
 
+extension AppDelegate: MessagingDelegate {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        print("DEBUG / PUSH NOTIFICATION / Firebase registration token \(fcmToken)")
+    }
+    
+    private func configureFirebase(for application: UIApplication) {
+        FirebaseApp.configure()
+        
+        UNUserNotificationCenter.current().delegate = self
+        Messaging.messaging().delegate = self
+        
+        let authOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: { _, _ in})
+        
+        application.registerForRemoteNotifications()
+    }
+}
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("didReceiveRemoteNotification")
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("willPresent")
+        completionHandler([.alert, .sound, .badge])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("didReceiveresponse")
+        completionHandler()
+    }
 }
 
