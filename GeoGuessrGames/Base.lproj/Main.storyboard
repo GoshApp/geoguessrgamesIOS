@@ -27,11 +27,11 @@
         <scene sceneID="dJq-aM-62H">
             <objects>
                 <viewController storyboardIdentifier="MapViewControllerID" id="i17-wf-rXQ" customClass="MapViewController" customModule="GeoGuessrGames" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="guX-id-YuS">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="guX-id-YuS">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bH3-ro-spf" customClass="GMSPanoramaView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bH3-ro-spf" customClass="GMSPanoramaView">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -55,7 +55,7 @@
                                     <action selector="nextButtons:" destination="i17-wf-rXQ" eventType="touchUpInside" id="KCb-Bg-e8u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqx-Yd-XFj">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqx-Yd-XFj">
                                 <rect key="frame" x="324" y="847" width="86" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="Mmq-Ex-0A6"/>
@@ -63,6 +63,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="map" catalog="system"/>
+                                <connections>
+                                    <action selector="changesize:" destination="i17-wf-rXQ" eventType="touchUpInside" id="V7V-uY-8Gu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ozc-KJ-53E"/>

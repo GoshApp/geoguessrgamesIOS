@@ -52,8 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var date = DateComponents()
         date.calendar = Calendar.current
-        date.hour = 15
-        date.minute = 30
+        date.hour = 14
+        date.minute = 08
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         
