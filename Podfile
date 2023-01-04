@@ -11,5 +11,7 @@ target 'GeoGuessrGames' do
  pod 'Google-Mobile-Ads-SDK'
  pod 'Firebase/Messaging'
  pod 'Firebase/Analytics'
+ pod 'Firebase/Core'
+ pod 'Firebase/Auth'
 
 end

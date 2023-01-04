@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		35C4CF1F295F070800C1BDC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35C4CF1E295F070800C1BDC5 /* GoogleService-Info.plist */; };
 		61CF4110A121AEECA2DB80E8 /* Pods_GeoGuessrGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934B3B20CFA8A43B6B2D4098 /* Pods_GeoGuessrGames.framework */; };
+		6D037F5429647A2B00C2A016 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D037F5329647A2B00C2A016 /* ForgotPasswordViewController.swift */; };
+		6D0ECB3C296433A8008762A9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ECB3B296433A8008762A9 /* StartViewController.swift */; };
+		6D0ECB3E296433BC008762A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ECB3D296433BC008762A9 /* LoginViewController.swift */; };
+		6D0ECB40296433CC008762A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0ECB3F296433CC008762A9 /* SignUpViewController.swift */; };
 		6D348192295069D800C24ED7 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 6D348191295069D800C24ED7 /* GoogleMobileAds */; };
 		6D5CD86D295062C80013A713 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CD86C295062C80013A713 /* StarRating.swift */; };
 		6D5CD86F295062EC0013A713 /* RezultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CD86E295062EC0013A713 /* RezultViewController.swift */; };
@@ -29,6 +33,10 @@
 /* Begin PBXFileReference section */
 		35C4CF1E295F070800C1BDC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62B3308445E67D960A16C589 /* Pods-GeoGuessrGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoGuessrGames.debug.xcconfig"; path = "Target Support Files/Pods-GeoGuessrGames/Pods-GeoGuessrGames.debug.xcconfig"; sourceTree = "<group>"; };
+		6D037F5329647A2B00C2A016 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		6D0ECB3B296433A8008762A9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		6D0ECB3D296433BC008762A9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6D0ECB3F296433CC008762A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6D5CD86C295062C80013A713 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		6D5CD86E295062EC0013A713 /* RezultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezultViewController.swift; sourceTree = "<group>"; };
 		6D8856CF295B0A2500931AB9 /* GeoGuessrGames.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoGuessrGames.entitlements; sourceTree = "<group>"; };
@@ -78,6 +86,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D0ECB3A2964330F008762A9 /* RegistrationView */ = {
+			isa = PBXGroup;
+			children = (
+				6D0ECB3B296433A8008762A9 /* StartViewController.swift */,
+				6D0ECB3D296433BC008762A9 /* LoginViewController.swift */,
+				6D0ECB3F296433CC008762A9 /* SignUpViewController.swift */,
+				6D037F5329647A2B00C2A016 /* ForgotPasswordViewController.swift */,
+			);
+			path = RegistrationView;
+			sourceTree = "<group>";
+		};
 		6D5CD86B295062910013A713 /* RezultView */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +129,7 @@
 			children = (
 				6D8856CF295B0A2500931AB9 /* GeoGuessrGames.entitlements */,
 				6D5CD86B295062910013A713 /* RezultView */,
+				6D0ECB3A2964330F008762A9 /* RegistrationView */,
 				6DBA6F59294C7D9100A537C4 /* MapsView */,
 				6DBA6F4E294C7BA700A537C4 /* View */,
 				6DBA6F4D294C7B9E00A537C4 /* Service */,
@@ -331,15 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0ECB3E296433BC008762A9 /* LoginViewController.swift in Sources */,
 				6DBA6F3C294C7B8200A537C4 /* CoursesController.swift in Sources */,
 				6DBA6F50294C7BD200A537C4 /* Service.swift in Sources */,
 				6DBA6F52294C7C0B00A537C4 /* Course.swift in Sources */,
 				6DBA6F58294C7D6B00A537C4 /* MapsViewController.swift in Sources */,
 				6D5CD86D295062C80013A713 /* StarRating.swift in Sources */,
+				6D0ECB3C296433A8008762A9 /* StartViewController.swift in Sources */,
 				6D5CD86F295062EC0013A713 /* RezultViewController.swift in Sources */,
+				6D037F5429647A2B00C2A016 /* ForgotPasswordViewController.swift in Sources */,
 				6DBA6F56294C7CC300A537C4 /* CourseCell.swift in Sources */,
 				6DBA6F54294C7C2E00A537C4 /* CourseViewModel.swift in Sources */,
 				6DBA6F38294C7B8200A537C4 /* AppDelegate.swift in Sources */,
+				6D0ECB40296433CC008762A9 /* SignUpViewController.swift in Sources */,
 				6DBA6F3A294C7B8200A537C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

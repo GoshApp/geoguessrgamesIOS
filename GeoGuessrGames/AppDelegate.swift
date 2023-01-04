@@ -85,6 +85,7 @@ extension AppDelegate: MessagingDelegate {
     }
     
     private func configureFirebase(for application: UIApplication) {
+        
         FirebaseApp.configure()
         
         UNUserNotificationCenter.current().delegate = self

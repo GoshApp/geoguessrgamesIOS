@@ -51,6 +51,8 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
         button.setTitle("PLAY NEXT ROUND", for: .normal)
         button.titleLabel?.textAlignment = .center
         let singUp = NSLocalizedString("PLAY NEXT ROUND", comment: "Next round")
@@ -207,12 +209,12 @@ class RezultViewController: UIViewController, GADFullScreenContentDelegate {
                     vc.curentPoints = curentPoints
                     vc.modalTransitionStyle = .flipHorizontal
                     vc.modalPresentationStyle = .currentContext
-                    show(vc, sender: self)
+                    self.navigationController?.pushViewController(vc, animated: true)
                     RezultViewController.progressi += 1 / 8
                     isAdsShowed = false
                 }else{
                     let presentOne = storyboard.instantiateViewController(withIdentifier: "CoursesControllerID") as! CoursesController
-                    present(presentOne, animated: false)
+                    self.navigationController?.pushViewController(presentOne, animated: true)
                     MapViewController.curentPoint = 1
                     RezultViewController.progressi = 1 / 8
                     RezultViewController.score = 0

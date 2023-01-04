@@ -7,10 +7,13 @@
 
 import UIKit
 import UserNotifications
+import FirebaseAuth
 
 class CoursesController: UITableViewController {
     
     var courseViewModels = [CourseViewModel]()
+    
+    var window: UIWindow?
     
     let cellId = "cellId"
     let textContentTitle = "title"
@@ -20,7 +23,7 @@ class CoursesController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupNavBar()
+        setupNavBar()
         setupTableView()
         fetchData()
     }
@@ -56,7 +59,7 @@ class CoursesController: UITableViewController {
         vc!.curentPoints = courseViewModels[indexPath.row]
         vc!.modalTransitionStyle = .flipHorizontal
         vc!.modalPresentationStyle = .currentContext
-        show(vc!, sender: self)
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     fileprivate func setupTableView() {
@@ -71,11 +74,16 @@ class CoursesController: UITableViewController {
     
     fileprivate func setupNavBar() {
                 navigationItem.title = "Geo Guessr Game"
-                navigationController?.navigationBar.prefersLargeTitles = true
-                navigationController?.navigationBar.backgroundColor = .white
-                navigationController?.navigationBar.isTranslucent = false
-                navigationController?.navigationBar.barTintColor = UIColor.white
-                navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+    }
+    
+    @IBAction func logOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "StartViewController") as? StartViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }catch{
+            print(error)
+        }
     }
     
 }

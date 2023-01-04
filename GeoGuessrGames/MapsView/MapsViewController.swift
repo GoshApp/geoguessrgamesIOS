@@ -23,6 +23,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var latitudeOfPoint: Double = 0.0
     var longitudeOfPoint: Double = 0.0
     var curentPoints: CourseViewModel?
+    var window: UIWindow?
     
     static var curentPoint: Int = 1
     
@@ -130,7 +131,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         vc!.curentPoints = curentPoints
         vc!.latitudeOfPoint = latitudeOfPoint
         vc!.longitudeOfPoint = longitudeOfPoint
-        show(vc!, sender: self)
+        self.navigationController?.pushViewController(vc!, animated: true)
         MapViewController.curentPoint += 1
     }
     
