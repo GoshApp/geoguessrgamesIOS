@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FacebookLogin
 
 class LoginViewController: UIViewController {
 
@@ -26,6 +27,19 @@ class LoginViewController: UIViewController {
         textPassword.text = "Password"
         
         buttonCreate.setTitle("Sign in", for: .normal)
+        
+        let loginButton = FBLoginButton()
+        loginButton.delegate = self
+        loginButton.permissions = ["public_profile", "email"]
+        loginButton.frame.origin.y = 550
+        loginButton.frame.origin.x = 100
+        
+        view.addSubview(loginButton)
+        
+        if let token = AccessToken.current,
+            !token.isExpired {
+            // User is logged in, do work such as go to next view controller.
+        }
     }
     
     @IBAction func loginAction(_ sender: Any) {
@@ -44,15 +58,20 @@ class LoginViewController: UIViewController {
                  }
         }
     }
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension LoginViewController : LoginButtonDelegate {
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+//        if error == nil {
+//            GraphRequest(graphPath: "me", parameters: ["fields" : "email, name"], tokenString: AccessToken().tokenString, version: nil, httpMethod: HTTPMethod(rawValue: "GET")).start(completionHandler: { (nil, result, error) in
+//                if error == nil {
+//                    print(result)
+//                }
+//            })
+//        }
     }
-    */
-
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        print("Logout")
+    }
 }

@@ -16,6 +16,8 @@
 		6D348192295069D800C24ED7 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 6D348191295069D800C24ED7 /* GoogleMobileAds */; };
 		6D5CD86D295062C80013A713 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CD86C295062C80013A713 /* StarRating.swift */; };
 		6D5CD86F295062EC0013A713 /* RezultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CD86E295062EC0013A713 /* RezultViewController.swift */; };
+		6D7B2B172966C0BA00D92A88 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6D7B2B162966C0BA00D92A88 /* FacebookCore */; };
+		6D7B2B192966C0BA00D92A88 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 6D7B2B182966C0BA00D92A88 /* FacebookLogin */; };
 		6DBA6F38294C7B8200A537C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F37294C7B8200A537C4 /* AppDelegate.swift */; };
 		6DBA6F3A294C7B8200A537C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F39294C7B8200A537C4 /* SceneDelegate.swift */; };
 		6DBA6F3C294C7B8200A537C4 /* CoursesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F3B294C7B8200A537C4 /* CoursesController.swift */; };
@@ -78,7 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7B2B192966C0BA00D92A88 /* FacebookLogin in Frameworks */,
 				6D348192295069D800C24ED7 /* GoogleMobileAds in Frameworks */,
+				6D7B2B172966C0BA00D92A88 /* FacebookCore in Frameworks */,
 				61CF4110A121AEECA2DB80E8 /* Pods_GeoGuessrGames.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +230,8 @@
 			name = GeoGuessrGames;
 			packageProductDependencies = (
 				6D348191295069D800C24ED7 /* GoogleMobileAds */,
+				6D7B2B162966C0BA00D92A88 /* FacebookCore */,
+				6D7B2B182966C0BA00D92A88 /* FacebookLogin */,
 			);
 			productName = GeoGuessrGames;
 			productReference = 6DBA6F34294C7B8200A537C4 /* GeoGuessrGames.app */;
@@ -262,6 +268,7 @@
 			mainGroup = 6DBA6F2B294C7B8200A537C4;
 			packageReferences = (
 				6D348190295069D800C24ED7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				6D7B2B152966C0BA00D92A88 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 6DBA6F35294C7B8200A537C4 /* Products */;
 			projectDirPath = "";
@@ -630,6 +637,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		6D7B2B152966C0BA00D92A88 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -637,6 +652,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6D348190295069D800C24ED7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		6D7B2B162966C0BA00D92A88 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D7B2B152966C0BA00D92A88 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		6D7B2B182966C0BA00D92A88 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D7B2B152966C0BA00D92A88 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
