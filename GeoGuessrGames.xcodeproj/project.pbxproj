@@ -18,6 +18,7 @@
 		6D5CD86F295062EC0013A713 /* RezultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5CD86E295062EC0013A713 /* RezultViewController.swift */; };
 		6D7B2B172966C0BA00D92A88 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6D7B2B162966C0BA00D92A88 /* FacebookCore */; };
 		6D7B2B192966C0BA00D92A88 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 6D7B2B182966C0BA00D92A88 /* FacebookLogin */; };
+		6D851DB42968447200619FB6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D851DB32968447200619FB6 /* SettingViewController.swift */; };
 		6DBA6F38294C7B8200A537C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F37294C7B8200A537C4 /* AppDelegate.swift */; };
 		6DBA6F3A294C7B8200A537C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F39294C7B8200A537C4 /* SceneDelegate.swift */; };
 		6DBA6F3C294C7B8200A537C4 /* CoursesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA6F3B294C7B8200A537C4 /* CoursesController.swift */; };
@@ -41,6 +42,7 @@
 		6D0ECB3F296433CC008762A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6D5CD86C295062C80013A713 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		6D5CD86E295062EC0013A713 /* RezultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RezultViewController.swift; sourceTree = "<group>"; };
+		6D851DB32968447200619FB6 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6D8856CF295B0A2500931AB9 /* GeoGuessrGames.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoGuessrGames.entitlements; sourceTree = "<group>"; };
 		6DBA6F34294C7B8200A537C4 /* GeoGuessrGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoGuessrGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBA6F37294C7B8200A537C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = RezultView;
 			sourceTree = "<group>";
 		};
+		6D851DB22968446100619FB6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6D851DB32968447200619FB6 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		6DBA6F2B294C7B8200A537C4 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 				6DBA6F4D294C7B9E00A537C4 /* Service */,
 				6DBA6F4C294C7B9700A537C4 /* ViewModel */,
 				6DBA6F4B294C7B9200A537C4 /* Model */,
+				6D851DB22968446100619FB6 /* Setting */,
 				6DBA6F37294C7B8200A537C4 /* AppDelegate.swift */,
 				6DBA6F39294C7B8200A537C4 /* SceneDelegate.swift */,
 				6DBA6F3D294C7B8200A537C4 /* Main.storyboard */,
@@ -363,6 +374,7 @@
 				6DBA6F50294C7BD200A537C4 /* Service.swift in Sources */,
 				6DBA6F52294C7C0B00A537C4 /* Course.swift in Sources */,
 				6DBA6F58294C7D6B00A537C4 /* MapsViewController.swift in Sources */,
+				6D851DB42968447200619FB6 /* SettingViewController.swift in Sources */,
 				6D5CD86D295062C80013A713 /* StarRating.swift in Sources */,
 				6D0ECB3C296433A8008762A9 /* StartViewController.swift in Sources */,
 				6D5CD86F295062EC0013A713 /* RezultViewController.swift in Sources */,

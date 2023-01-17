@@ -23,8 +23,16 @@ class ForgotPasswordViewController: UIViewController {
     @IBAction func resetButton(_ sender: Any) {
         let email = emailField.text!
         if(!email.isEmpty){
-            Auth.auth().sendPasswordReset(withEmail: email) { (error) in
-                self.dismiss(animated: true, completion: nil)
+            Auth.auth().sendPasswordReset(withEmail: emailField.text!) { (error) in
+                if error == nil{
+                   self.dismiss(animated: true, completion: nil)
+                }else{
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }

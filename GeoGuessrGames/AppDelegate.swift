@@ -6,14 +6,22 @@
 //
 
 import UIKit
+
 import GoogleMaps
 import GoogleMobileAds
+import GoogleSignIn
+
 import UserNotifications
+
 import Firebase
 import FirebaseAnalytics
 import FirebaseMessaging
+import FirebaseCore
+
 import FBSDKCoreKit
+
 import FacebookCore
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         ApplicationDelegate.shared.application(
             application,
@@ -49,20 +56,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = CustomNavigationController(rootViewController: CoursesController())
         sendNotifications()
+        
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+          if error != nil || user == nil {
+            // Show the app's signed-out state.
+          } else {
+            // Show the app's signed-in state.
+          }
+        }
         return true
     }
-    
-    func application(
-        _ app: UIApplication,
-        open url: URL,
-        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
-    ) -> Bool {
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         ApplicationDelegate.shared.application(
             app,
             open: url,
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
+        var handled: Bool
+
+        handled = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+          return true
+        }
+
+        // Handle other custom URL types.
+
+        // If not handled by this app, return false.
+        return false
     }
     
     func sendNotifications(){

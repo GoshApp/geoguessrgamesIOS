@@ -8,6 +8,7 @@
 import UIKit
 import UserNotifications
 import FirebaseAuth
+import GoogleSignIn
 
 class CoursesController: UITableViewController {
     
@@ -74,19 +75,10 @@ class CoursesController: UITableViewController {
     
     fileprivate func setupNavBar() {
                 navigationItem.title = "Geo Guessr Game"
+                navigationItem.setHidesBackButton(true, animated: true)
     }
-    
-    @IBAction func logOut(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "StartViewController") as? StartViewController
-            self.navigationController?.pushViewController(vc!, animated: true)
-        }catch{
-            print(error)
-        }
-    }
-    
 }
+
 class CustomNavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
